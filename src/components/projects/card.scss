@@ -1,0 +1,29 @@
+.kard {
+  width: 20rem;
+  background-color: rgb(219, 0, 0);
+
+  .kard-img {
+    width: 100%; ;
+    height: 14rem;
+    object-fit: cover;
+  }
+
+  h5 {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .kard {
+    width: 10rem;
+
+    .kard-img {
+      width: 100%; ;
+      height: 5rem;
+      object-fit: cover;
+    }
+  }
+}
+

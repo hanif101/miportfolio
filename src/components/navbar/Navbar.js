@@ -1,39 +1,25 @@
+/* eslint-disable */
 import React from 'react'
 import { Link } from 'react-router-dom'
 
 import './navbar.scss'
-// import { Portfolio } from '../Portfolio'
 
-export function Navbar() {
+let inHome = () => (
+  <div className='container-fluid nav_secondary'>
+  <Link to='/about' className='nav_link about'>about</Link>
+  <Link to='/projects' className='nav_link projects'>projects</Link>
+  <Link to='/skills' className='nav_link skills'>skills</Link>
+</div>
+)
+
+export function Navbar({home, about, projects, skills}) {
   return (
     <div className='container-fluid nav_primary'>
-      <div className='nav_secondary'>
-        <div className='nav_full_name'>
-          <span className='fname_span'>Hanifa</span>
-          <span className='lname_span'>Ahmadov</span>
-        </div>
-
-        <div className='nav_software_developer'>
-          <span className='dev_span'>Software Developer</span>
-        </div>
-
-        <div className='nav_links'>
-          <span>
-            <Link to='/portfolio' className='portfolio'>
-              Portfolio
-            </Link>
-          </span>
-          <span>
-            <Link to='/skills' className='skills'>
-              Skills
-            </Link>
-          </span>
-          <span>
-            <Link to='/resume' className='resume'>
-              Resume
-            </Link>
-          </span>
-        </div>
+      <div className='container-fluid nav_secondary'>
+        {home && <Link to='/' className='nav_link home'>home</Link> }
+        {about && <Link to='/about' className='nav_link about'>about</Link>}
+        {projects && <Link to='/projects' className='nav_link projects'>projects</Link>}
+        {skills && <Link to='/skills' className='nav_link skills'>skills</Link>}
       </div>
     </div>
   )

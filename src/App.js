@@ -1,18 +1,32 @@
-import React, { Fragment } from 'react'
-import { Route, Router, useHistory } from 'react-router-dom'
+/* eslint-disable */
+import React, { Fragment, useState } from 'react'
+import { Route, Router, Switch, useHistory, useLocation } from 'react-router-dom'
 
-import { Navbar } from './components/navbar/Navbar'
-import { Portfolio } from './components/Portfolio'
-import { Sidebar } from './components/sidebar/Sidebar'
+import './app.scss'
+import { Home } from './components/home/Home'
+import { About } from './components/about/About'
+import { Projects } from './components/projects/Projects'
+
+import { AnimatePresence, motion } from 'framer-motion/dist/framer-motion'
 
 const App = () => {
   const history = useHistory()
+  const location = useLocation()
+
+  const [open, setOpen] = useState(true)
+
   return (
-    <Fragment>
-      {/* <Route exact path='/' component={ Navbar } />
-      <Route exact path='/portfolio' component={ Portfolio } /> */}
-      <Navbar />
-    </Fragment>
+    <AnimatePresence>
+      <div className='app_primary'>
+        <Router history={history} location={location} key={location.pathname}>
+          <Route exact path='/' component={() => <Home open={open} />} />
+          <Route exact path='/about' component={() => <About />} />
+          <Route exact path='/projects'>
+            <Projects />
+          </Route>
+        </Router>
+      </div>
+    </AnimatePresence>
   )
 }
 

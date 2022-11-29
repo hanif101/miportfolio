@@ -1,0 +1,18 @@
+.bounce {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    border-bottom: 2px solid rgb(62, 60, 60);
+    margin: 1.5rem;
+    margin-top: 3rem;
+    padding-bottom: 0.3rem;
+  }
+
+  span:hover {
+    border-bottom: 2px solid rgb(255, 255, 255);
+    transition: 0.2s ease-in;
+  }
+}

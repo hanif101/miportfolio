@@ -1,0 +1,98 @@
+@import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+
+.home_secondary{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  box-shadow: 0px 0px 50px 2px rgb(33, 33, 33);
+}
+
+
+
+
+// .nav_secondary {
+//   // background: rgba(0, 0, 0, 0.628);
+//   // box-shadow: 0px 0px 90px 1px rgba(108, 1, 1, 0.516);
+//   margin: 0 auto;
+//   border-radius: 1rem;
+//   padding: 2rem;
+
+//   display: flex;
+//   justify-content: center;
+//   align-items:center;
+//   flex-direction: column;
+// }
+
+// .nav_full_name{
+//   margin: 0 1rem;
+//   font-family: 'Roboto', sans-serif;
+//   font-weight: bold !important;
+//   font-size: calc(1.5rem + 2vw);
+
+//   span{
+//     margin: .5rem;
+//   }
+
+// }
+
+// .nav_software_developer {
+//   margin-bottom: 1.5rem;
+//   font-size: calc(1vw + 10px);
+// }
+
+// .nav_links{
+//   display: flex;
+//   justify-content: center;
+//   align-items:center;
+//   flex-direction: column;
+
+//   font-size: calc(0.7rem + 1vw);
+//   text-decoration:none;
+  
+//   span{
+//     margin: .4rem 0;
+//   }
+
+
+//   .portfolio, .skills, .resume {
+//     text-decoration: none;
+//     color:rgb(234, 234, 234) !important;
+//     font-family: 'Roboto';
+//     position:relative;
+//   }
+  
+//   .portfolio::after, .skills::after, .resume::after {
+//     content: '';
+//     position: absolute;
+//     left: 0;
+//     bottom: -20%;
+//     height: 3px;
+//     width:100%;
+//     background-color:rgb(85, 84, 84);
+//     transition: 0.2s ease-out;
+//   }
+  
+//   .portfolio:hover::after, .skills:hover::after, .resume:hover::after {
+//     background-color:rgb(255, 255, 255);
+//     color: #555999 !important;
+//     transition: 0.2s ease-in;
+//   }
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
