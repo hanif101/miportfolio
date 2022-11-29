@@ -1,17 +1,44 @@
 @import '~bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+.nav_primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.nav_secondary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
 
+  .nav_link {
+    text-decoration: none;
+    color: rgb(234, 234, 234);
+    margin: 0 2rem;
 
+    height: 38px;
+    line-height: 49px;
+    color: rgba(83, 83, 85, 0.975);
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    will-change: transform, opacity;
+    overflow: hidden;
+  }
 
+  .nav_link:hover {
+    color: rgb(255, 255, 255);
+    transition: 0.3s ease-in;
+  }
+}
 
+@media (max-width: 575px) {
 
-
-
-
-
-
-
-
-
+  .nav_link {
+    margin: 0 0.5rem !important;
+    font-size: 1.8rem !important;
+    overflow: visible !important;
+  }
+}

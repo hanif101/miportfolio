@@ -45,7 +45,7 @@ export const Bounce = ({ icons }) => {
   return (
     <div className='bounce'>
       {icons.map((icon, index) => (
-        <span>
+        <span key={index}>
           <SqueezeSpring key={index}> {icon} </SqueezeSpring>
         </span>
       ))}

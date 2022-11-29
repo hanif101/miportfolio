@@ -1,46 +1,33 @@
 /* eslint-disable */
 import React, { Fragment, useState } from 'react'
-import { Route, Router, useHistory } from 'react-router-dom'
+import { Route, Router, Switch, useHistory, useLocation } from 'react-router-dom'
 
-import './App.scss'
+import './app.scss'
 import { Home } from './components/home/Home'
-import { Navbar } from './components/navbar/Navbar'
+import { About } from './components/about/About'
+import { Projects } from './components/projects/Projects'
 
-import { Animated_Icons } from './components/animate/icons/Animated_Icons'
+import { AnimatePresence, motion } from 'framer-motion/dist/framer-motion'
 
 const App = () => {
-  const [open, setOpen] = useState(true)
   const history = useHistory()
+  const location = useLocation()
+
+  const [open, setOpen] = useState(true)
 
   return (
-    <div className='container-fluid app_primary'>
-      <div className='app_navbar_wrapper'>
-        <Navbar />
+    <AnimatePresence>
+      <div className='app_primary'>
+        <Router history={history} location={location} key={location.pathname}>
+          <Route exact path='/' component={() => <Home open={open} />} />
+          <Route exact path='/about' component={() => <About />} />
+          <Route exact path='/projects'>
+            <Projects />
+          </Route>
+        </Router>
       </div>
-      
-      <div className='app_home_wrapper'>
-        <Home open={open} />
-        <Animated_Icons/>
-      </div>
-   
-    </div>
+    </AnimatePresence>
   )
 }
 
 export default App
-
-// <div className='body'>
-//   {/* <Router history={history}>
-//     <Route exact path='/' component={Home} />
-//   </Router> */}
-// </div>
-
-// <div className='container' onClick={() => setOpen((state) => !state)}>
-//   <Trail open={open}>
-//     <span>Hanifa</span>
-//     <span>Ahmadov</span>
-//     <span>Full</span>
-//     <span>Stack</span>
-//     <span>Developer</span>
-//   </Trail>
-// </div>

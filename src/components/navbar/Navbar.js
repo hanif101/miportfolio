@@ -4,13 +4,22 @@ import { Link } from 'react-router-dom'
 
 import './navbar.scss'
 
-export function Navbar() {
+let inHome = () => (
+  <div className='container-fluid nav_secondary'>
+  <Link to='/about' className='nav_link about'>about</Link>
+  <Link to='/projects' className='nav_link projects'>projects</Link>
+  <Link to='/skills' className='nav_link skills'>skills</Link>
+</div>
+)
+
+export function Navbar({home, about, projects, skills}) {
   return (
-    <div className='container nav_primary'>
-      <div className='nav_secondary'>
-        <span>About</span>
-        <span>Projects</span>
-        <span>Skills</span>
+    <div className='container-fluid nav_primary'>
+      <div className='container-fluid nav_secondary'>
+        {home && <Link to='/' className='nav_link home'>home</Link> }
+        {about && <Link to='/about' className='nav_link about'>about</Link>}
+        {projects && <Link to='/projects' className='nav_link projects'>projects</Link>}
+        {skills && <Link to='/skills' className='nav_link skills'>skills</Link>}
       </div>
     </div>
   )
