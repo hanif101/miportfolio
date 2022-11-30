@@ -42,6 +42,8 @@ const SqueezeSpring = ({ children }) => {
 }
 
 export const Bounce = ({ icons }) => {
+
+  // console.log(icons)
   return (
     <div className='bounce'>
       {icons.map((icon, index) => (
