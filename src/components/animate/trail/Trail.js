@@ -15,7 +15,7 @@ export const Trail = ({ open, children }) => {
   })
   return (
     <div>
-      {console.log(trail)}
+      {/* {console.log(trail)} */}
       {trail.map(({ height, ...style }, index) => (
         <a.div key={index} className='trailsText' style={style}>
           <a.div style={{ height }}>{items[index]}</a.div>

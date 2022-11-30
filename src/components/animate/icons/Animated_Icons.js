@@ -7,6 +7,8 @@ import { icons } from './icons'
 import { Bounce } from './Bounce'
 
 export function Animated_Icons() {
+
+  console.log('icons in animated', icons)
   const iconVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { delay: 0.5, duration: 1 } }

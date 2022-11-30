@@ -6,6 +6,7 @@ import './app.scss'
 import { Home } from './components/home/Home'
 import { About } from './components/about/About'
 import { Projects } from './components/projects/Projects'
+import { Skills } from './components/skills/Skills'
 
 import { AnimatePresence, motion } from 'framer-motion/dist/framer-motion'
 
@@ -19,11 +20,23 @@ const App = () => {
     <AnimatePresence>
       <div className='app_primary'>
         <Router history={history} location={location} key={location.pathname}>
-          <Route exact path='/' component={() => <Home open={open} />} />
-          <Route exact path='/about' component={() => <About />} />
+      
+          <Route exact path='/'>
+            <Home open={open}/>
+          </Route>
+
+          <Route exact path='/about'>
+            <About/>
+          </Route>
+
           <Route exact path='/projects'>
             <Projects />
           </Route>
+
+          <Route exact path='/skills'>
+            <Skills/>
+          </Route>
+          
         </Router>
       </div>
     </AnimatePresence>
